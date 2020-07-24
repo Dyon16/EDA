@@ -5,22 +5,15 @@ void ordenar(int *vec, int tam)
     int aux;
     for (int i = 0; i < tam; i++)
     {
-        if (vec[i] > vec[i+1])
+        for (int j = i+1; j < tam; j++)
         {
-            printf("i: %d\n", vec[i]);
-            printf("i+1: %d\n", vec[i+1]);
-            aux = vec[i];
-            vec[i] = vec[i+1];
-            vec[i+1] = aux;
-            printf("i: %d\n", vec[i]);
-            printf("i+1: %d\n", vec[i+1]);
+            if (vec[j] < vec[i])
+            {
+                aux = vec[i];
+                vec[i] = vec[j];
+                vec[j] = aux;
+            }
         }
-        for (int j = 0; j < tam; j++)
-        {
-            printf("%d ", vec[j]);
-        }
-        printf ("\n");
-
     }
 }
 
@@ -40,5 +33,10 @@ void main()
     }
 
     ordenar(vec,tam);
+
+    for (int i = 0; i < tam; i++)
+    {
+        printf("%d ", vec[i]);
+    }
 
 }
