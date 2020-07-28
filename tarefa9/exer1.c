@@ -15,6 +15,8 @@ typedef struct
 
 void inserir()
 {
+    int aux;
+
     printf("CADASTRO\n\n");
     FILE *arquivo = fopen("arq.dat","a+b");
     Usuario User;
@@ -25,11 +27,11 @@ void inserir()
     printf("Codigo do usuario: ");
     scanf("%d", &User.codigo);
 
-    int teste = fwrite(&User, sizeof(User), 1, arquivo);
+    aux = fwrite(&User, sizeof(User), 1, arquivo);
     if (ferror(arquivo)) 
         printf("Erro ao inserir os dados.\n");
     else 
-        printf("\nCadastro realizado com sucesso. %d\n",teste);
+        printf("\nCadastro realizado com sucesso.\n",aux);
     fclose(arquivo);
 }
 
