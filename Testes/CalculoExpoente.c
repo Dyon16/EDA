@@ -2,7 +2,13 @@
 
 void main()
 {
-    int b = 2, e = 4, resp = 1;
+    int b, e, resp = 1;
+
+    printf("Digite o valor da base: ");
+    scanf("%d", &b);
+
+    printf("Digite o valor da base: ");
+    scanf("%d", &e);
 
     for (int i = 1; i <= e; i++)
     {
