@@ -18,7 +18,7 @@ void inserir()
     int aux;
 
     printf("CADASTRO\n\n");
-    FILE *arquivo = fopen("arq.dat","a+b");
+    FILE *arquivo = fopen("arq.dat","a+b"); //"a+b" Acrescenta dados ou cria um arquivo binario para leitura e escrita
     Usuario User;
 
     printf("Nome do usuario: ");
@@ -31,11 +31,7 @@ void inserir()
     if (ferror(arquivo)) 
         printf("Erro ao inserir os dados.\n");
     else 
-        printf("\nCadastro realizado com sucesso.\n",aux);
+        printf("\nCadastro realizado com sucesso.\n", aux);
     fclose(arquivo);
 }
 
-void main()
-{
-    inserir();
-}
