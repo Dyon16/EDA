@@ -2,7 +2,7 @@
 
 void main()
 {
-    int tam, soma;
+    int tam, soma = 0;
 
     printf("Digite o tamanho do vetor: ");
     scanf("%d", &tam);
